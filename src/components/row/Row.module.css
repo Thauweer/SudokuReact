@@ -1,0 +1,14 @@
+div.Row {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+hr.DividingLine {
+    display: flex;
+    justify-self: self-end;
+    color: red;
+    border-style: inset;
+    border-width: 1px;
+}

@@ -1,0 +1,16 @@
+button.NumButton {
+    display: inline-flex;
+    align-items: center;
+    width: 45px;
+    height: 35px;
+    cursor: pointer;
+    color: yellow;
+    background-color: blueviolet;
+    border-color: yellow;
+    border-radius: 25%;
+}
+
+p.InnerText {
+    width: 100%;
+    text-align: center;
+}

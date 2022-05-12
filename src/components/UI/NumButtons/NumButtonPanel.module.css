@@ -1,0 +1,16 @@
+.NumButtonPanel {
+    display: flex;
+    height: auto;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 200px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
+}

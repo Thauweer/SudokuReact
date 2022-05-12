@@ -1,0 +1,134 @@
+div.Cell {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+    width: 30px;
+    height: 30px;  
+    border: 2px solid #dd4;
+}
+
+.InnerText {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    margin-right: auto;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.InnerTextSelected{
+    width: 60%;
+    height: 60%;
+    color: #f00;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #555;
+    animation: .5s linear 1s infinite alternate slidein;
+    animation-delay: 0s;
+}
+
+@keyframes slidein {
+    from {
+        width: 60%;
+        height: 60%;
+        background-color: #555;
+    }
+
+    to {
+        width: 85%;
+        height: 85%;
+        background-color: #66666622;
+    }
+}
+
+.Top {
+display: inline-flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;    width: 30px;
+    height: 30px;
+    align-items: center;         
+    border: 2px solid;
+    border-color: #99d #dd4 #dd4 #dd4;
+}
+
+.Right {
+display: inline-flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;    width: 30px;
+    height: 30px;
+    align-items: center;
+          
+    border: 2px solid;
+    border-color: #dd4 #99d #dd4 #dd4;
+}
+
+.Down {
+display: inline-flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;    width: 30px;
+    height: 30px;
+    align-items: center;        
+    border: 2px solid;
+    border-color: #dd4 #dd4 #99d #dd4;
+}
+
+.Left {    
+display: inline-flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;    width: 30px;
+    height: 30px;
+    align-items: center; 
+    border: 2px solid;
+    border-color: #dd4 #dd4 #dd4 #99d;
+}
+
+.TopRight {
+display: inline-flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;    width: 30px;
+    height: 30px;
+    align-items: center;  
+    border: 2px solid;
+    border-color: #99d #99d #dd4 #dd4;
+}
+
+.RightDown {
+display: inline-flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;    width: 30px;
+    height: 30px;
+    align-items: center;  
+    border: 2px solid;
+    border-color: #dd4 #99d #99d #dd4 ;
+}
+
+.DownLeft {
+display: inline-flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;    width: 30px;
+    height: 30px;
+    align-items: center;  
+    border: 2px solid;
+    border-color: #dd4 #dd4 #99d #99d ;
+}
+
+.LeftTop {
+display: inline-flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;    width: 30px;
+    height: 30px;
+    align-items: center;  
+    border: 2px solid;
+    border-color: #99d #dd4 #dd4 #99d ;
+}
+
+
