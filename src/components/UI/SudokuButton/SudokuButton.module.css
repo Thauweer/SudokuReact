@@ -1,12 +1,10 @@
-button.NumButton {
-    display: inline-flex;
-    align-items: center;
-    width: 45px;
-    height: 35px;
+.OptionButton {
     cursor: pointer;
-    color: yellow;
+    width: 130px;
+    height: 35px;
     background-color: blueviolet;
     border-color: yellow;
+    color: yellow;
     border-radius: 25%;
     text-align: center;
 }

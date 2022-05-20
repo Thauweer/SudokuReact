@@ -1,134 +1,95 @@
-div.Cell {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;  
-    text-align: center;
-    width: 30px;
-    height: 30px;  
-    border: 2px solid #dd4;
+.Cell, .Top, .Right, .Down, .Left, .TopRight, .RightDown, .DownLeft, .LeftTop {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #dd4;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-.InnerText {
-    width: 60%;
-    height: 60%;
-    display: flex;
-    margin-right: auto;
-    border-radius: 50%;
-    font-size: 20px;
+.Cell:hover, .Top:hover, .Right:hover, .Down:hover, .Left:hover, .TopRight:hover, .RightDown:hover, .DownLeft:hover, .LeftTop:hover {
+  background-color: #ccc;
 }
 
-.InnerTextSelected{
+.InnerTextSelected {
+  width: 60%;
+  height: 60%;
+  color: #f00;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: #555;
+  -webkit-animation: .3s linear 1s infinite alternate slidein;
+          animation: .3s linear 1s infinite alternate slidein;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+@-webkit-keyframes slidein {
+  from {
     width: 60%;
     height: 60%;
-    color: #f00;
-    font-size: 20px;
-    border-radius: 50%;
     background-color: #555;
-    animation: .5s linear 1s infinite alternate slidein;
-    animation-delay: 0s;
+  }
+  to {
+    width: 85%;
+    height: 85%;
+    background-color: #66666622;
+  }
 }
 
 @keyframes slidein {
-    from {
-        width: 60%;
-        height: 60%;
-        background-color: #555;
-    }
-
-    to {
-        width: 85%;
-        height: 85%;
-        background-color: #66666622;
-    }
+  from {
+    width: 60%;
+    height: 60%;
+    background-color: #555;
+  }
+  to {
+    width: 85%;
+    height: 85%;
+    background-color: #66666622;
+  }
 }
 
 .Top {
-display: inline-flex;
-    justify-content: center;
-    align-items: center;  
-    text-align: center;    width: 30px;
-    height: 30px;
-    align-items: center;         
-    border: 2px solid;
-    border-color: #99d #dd4 #dd4 #dd4;
+  border-color: #99d #dd4 #dd4 #dd4;
 }
 
 .Right {
-display: inline-flex;
-    justify-content: center;
-    align-items: center;  
-    text-align: center;    width: 30px;
-    height: 30px;
-    align-items: center;
-          
-    border: 2px solid;
-    border-color: #dd4 #99d #dd4 #dd4;
+  border-color: #dd4 #99d #dd4 #dd4;
 }
 
 .Down {
-display: inline-flex;
-    justify-content: center;
-    align-items: center;  
-    text-align: center;    width: 30px;
-    height: 30px;
-    align-items: center;        
-    border: 2px solid;
-    border-color: #dd4 #dd4 #99d #dd4;
+  border-color: #dd4 #dd4 #99d #dd4;
 }
 
-.Left {    
-display: inline-flex;
-    justify-content: center;
-    align-items: center;  
-    text-align: center;    width: 30px;
-    height: 30px;
-    align-items: center; 
-    border: 2px solid;
-    border-color: #dd4 #dd4 #dd4 #99d;
+.Left {
+  border-color: #dd4 #dd4 #dd4 #99d;
 }
 
 .TopRight {
-display: inline-flex;
-    justify-content: center;
-    align-items: center;  
-    text-align: center;    width: 30px;
-    height: 30px;
-    align-items: center;  
-    border: 2px solid;
-    border-color: #99d #99d #dd4 #dd4;
+  border-color: #99d #99d #dd4 #dd4;
 }
 
 .RightDown {
-display: inline-flex;
-    justify-content: center;
-    align-items: center;  
-    text-align: center;    width: 30px;
-    height: 30px;
-    align-items: center;  
-    border: 2px solid;
-    border-color: #dd4 #99d #99d #dd4 ;
+  border-color: #dd4 #99d #99d #dd4;
 }
 
 .DownLeft {
-display: inline-flex;
-    justify-content: center;
-    align-items: center;  
-    text-align: center;    width: 30px;
-    height: 30px;
-    align-items: center;  
-    border: 2px solid;
-    border-color: #dd4 #dd4 #99d #99d ;
+  border-color: #dd4 #dd4 #99d #99d;
 }
 
 .LeftTop {
-display: inline-flex;
-    justify-content: center;
-    align-items: center;  
-    text-align: center;    width: 30px;
-    height: 30px;
-    align-items: center;  
-    border: 2px solid;
-    border-color: #99d #dd4 #dd4 #99d ;
+  border-color: #99d #dd4 #dd4 #99d;
 }
-
-
+/*# sourceMappingURL=Cell.module.css.map */

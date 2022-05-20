@@ -1,16 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 import classes from './NumButton.module.css'
 
-export default class NumButton extends Component {
-  render() {
-    return (
-      <button 
+
+
+export default function NumButton(props) {
+  return (
+    <button 
       className={classes.NumButton} 
-      onClick={() =>{ this.props.dispatchGameField(this.props.Number)}
-      }
-      >
-        <p className={classes.InnerText}>{this.props.Number}</p>
+      onClick={() =>{ 
+        props.sudoku.changeCell(props.position, props.Number)
+        props.incCounterSteps()
+      }}>
+        {props.Number}
       </button>
-    )
-  }
+  )
 }

@@ -1,12 +1,12 @@
 import './App.css';
 import GridSudoku from './components/gridSudoku/GridSudoku';
 
-function App() {
 
+function App() { 
   return (
     <div className="App">
       <div className='Container'>
-        <GridSudoku/>
+        <GridSudoku/>       
         </div>
     </div>
   );

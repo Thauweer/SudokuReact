@@ -1,8 +1,6 @@
 export class Sudoku{
     constructor(size){
-        this.size = size
-        this.newField()
-        this.randomizeField()
+        this.newGame(size)
     }
 
     newField(){
@@ -13,6 +11,20 @@ export class Sudoku{
                 return Math.floor((index*size + index/size + indexJ) % S + 1)
             })
         })
+    }
+
+    newGame(size){
+        this.size = size
+        this.newField()
+        this.randomizeField()
+    }
+
+    setSetterField(setterField){
+        this.setterField = setterField
+    }
+
+    changeCell(position, value){
+        this.field[position['y']][position['x']] = value
     }
 
     #setEmptyCells(complexity){        

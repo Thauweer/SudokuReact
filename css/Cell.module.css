@@ -1,0 +1,16 @@
+.Cell {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #dd4;
+}
+/*# sourceMappingURL=Cell.module.css.map */

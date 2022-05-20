@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,OAAO,EAAE,WAAW;EACpB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,cAAc;CACzB",
+    "sources": [
+        "../src/components/cell/Cell.scss"
+    ],
+    "names": [],
+    "file": "Cell.module.css"
+}

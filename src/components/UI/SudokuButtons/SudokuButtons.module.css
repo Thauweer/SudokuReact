@@ -1,0 +1,6 @@
+.SudokuButtons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    margin: 20px 0px;
+}

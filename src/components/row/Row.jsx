@@ -14,6 +14,7 @@ export default class Row extends Component {
                   x:index,
                   y:this.props.index, 
                 }}
+                gameSize={this.props.gameSize}
                 selectedCell={this.props.selectedCell}
                 setSelectedCell={this.props.setSelectedCell}
                 updeateCellData={this.props.updeateCellData}

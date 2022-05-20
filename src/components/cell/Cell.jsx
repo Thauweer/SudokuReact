@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import classes from './Cell.module.css'
 
 function checkValue(value){
@@ -9,34 +9,34 @@ function checkValue(value){
 }
 
 export default function Cell(props) {
-  const [consist, setconsist] = useState(checkValue(props.value))
   let StyleCell = classes.InnerText
   let className = classes.Cell
+  
 
   const findStyle = () => {
-    if((props.position['x']+1)%3===0){
+    if((props.position['x']+1)%props.gameSize===0){
       className = classes.Right
     }
-    else if((props.position['x'])%3===0){
+    else if((props.position['x'])%props.gameSize===0){
       className = classes.Left
     }
-    else if((props.position['y']+1)%3===0){
+    else if((props.position['y']+1)%props.gameSize===0){
       className = classes.Down
     }
-    else if((props.position['y'])%3===0){
+    else if((props.position['y'])%props.gameSize===0){
       className = classes.Top
     }
 
-    if(((props.position['y'])%3===0)&&((props.position['x']+1)%3===0)){
+    if(((props.position['y'])%props.gameSize===0)&&((props.position['x']+1)%props.gameSize===0)){
       className = classes.TopRight
     }
-    else if(((props.position['y']+1)%3===0)&&((props.position['x']+1)%3===0)){
+    else if(((props.position['y']+1)%props.gameSize===0)&&((props.position['x']+1)%props.gameSize===0)){
       className = classes.RightDown
     }
-    else if(((props.position['y']+1)%3===0)&&((props.position['x'])%3===0)){
+    else if(((props.position['y']+1)%props.gameSize===0)&&((props.position['x'])%props.gameSize===0)){
       className = classes.DownLeft
     }
-    else if(((props.position['y'])%3===0)&&((props.position['x'])%3===0)){
+    else if(((props.position['y'])%props.gameSize===0)&&((props.position['x'])%props.gameSize===0)){
       className = classes.LeftTop
     }
   }   
@@ -47,21 +47,15 @@ export default function Cell(props) {
       StyleCell = classes.InnerTextSelected
     }
   }
-  const handClick = () => {
-    props.setSelectedCell(props.position)
-    props.updeateCellData(setconsist)  
-  }
 
   findStyle()
   comparePositions()
   return (
     <div 
     className={className}
-    onClick={() =>
-      handClick()          
-      }>
+    onClick={() =>{props.setSelectedCell(props.position)}}>
         <div className={StyleCell}>
-          {consist}
+          {checkValue(props.value)}
         </div>
     </div>
   )
