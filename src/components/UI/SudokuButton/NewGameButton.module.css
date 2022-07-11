@@ -1,10 +1,10 @@
 .OptionButton {
     cursor: pointer;
-    width: 130px;
+    width: auto;
     height: 35px;
     background-color: blueviolet;
     border-color: yellow;
     color: yellow;
-    border-radius: 25%;
+    border-radius: 5px;
     text-align: center;
 }

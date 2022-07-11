@@ -1,6 +1,6 @@
 export class Sudoku{
-    constructor(size){
-        this.newGame(size)
+    constructor(size, complexety){
+        this.newGame(size, complexety)
     }
 
     newField(){
@@ -13,8 +13,9 @@ export class Sudoku{
         })
     }
 
-    newGame(size){
+    newGame(size, complexety){     
         this.size = size
+        this.complexety = complexety
         this.newField()
         this.randomizeField()
     }
@@ -25,6 +26,10 @@ export class Sudoku{
 
     changeCell(position, value){
         this.field[position['y']][position['x']] = value
+    }
+
+    setComplexety(complexety){
+        this.complexety = complexety
     }
 
     #setEmptyCells(complexity){        
@@ -49,7 +54,7 @@ export class Sudoku{
     }
 
     randomizeField(){
-        let randomizeMeth = Math.floor(Math.random()*1000000).toString(4)
+        let randomizeMeth = Math.floor(Math.random()*10000000000).toString(5)
 
         Array.from(randomizeMeth).forEach(element => {
             switch(element){
@@ -73,9 +78,8 @@ export class Sudoku{
             }
         });
 
-
         this.solvedField = this.field
-        this.#setEmptyCells(5)
+        this.#setEmptyCells(this.complexety)
     }
 
     #transpondField(){
